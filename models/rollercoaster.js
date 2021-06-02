@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const rollercoaster = new Schema({
+const Rollercoaster = new Schema({
   name: { type: String, required: true },
   themePark: { type: String, required: true },
   description: { type: String, required: true },
@@ -9,4 +9,5 @@ const rollercoaster = new Schema({
   topSpeed: { type: String, required: true },
   image: { type: String, required: true }
 })
-module.exports = rollercoaster
+
+module.exports = Rollercoaster
