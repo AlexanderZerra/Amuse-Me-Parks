@@ -30,8 +30,22 @@ const createRollercoaster = async (req, res) => {
   }
 }
 
+const deleteRollercoaster = async (request, response) => {
+  try {
+    const { id } = request.params
+    const deleted = await Rollercoaster.findByIdAndDelete(id)
+    if (deleted) {
+      return response.status(200).send('DELETED')
+    }
+    throw new Error('Coaster not found')
+  } catch (error) {
+    return response.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getAllRollercoaster,
   getAllThemeparks,
-  createRollercoaster
+  createRollercoaster,
+  deleteRollercoaster
 }
