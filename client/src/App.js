@@ -9,7 +9,7 @@ import Nav from './component/Nav'
 
 import Home from './pages/Home'
 import CoasterList from './pages/CoasterList'
-// import RollerCoasterDetails from './pages/RollerCoasterDetails'
+import RollerCoasterDetails from './pages/RollerCoasterDetails'
 // import RollerCoasterForm from './pages/RollerCoasterForm'
 
 import './App.css'
@@ -63,6 +63,15 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route
+            path="/coasterdetails/:id"
+            component={(props) => (
+              <RollerCoasterDetails
+                {...props}
+                rollercoasters={this.state.rollercoasters}
+              ></RollerCoasterDetails>
+            )}
+          />
           <Route
             path="/coasters"
             component={(props) => (
