@@ -9,6 +9,15 @@ const getAllRollercoaster = async (req, res) => {
   }
 }
 
+const getRollercoasterById = async (req, res) => {
+  try {
+    const rollercoasters = await Rollercoaster.findByIdAndGet(id)
+    return res.status(200).json({ rollercoasters })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getAllThemeparks = async (req, res) => {
   try {
     const themeparks = await Themepark.find()
@@ -60,5 +69,6 @@ module.exports = {
   getAllThemeparks,
   createRollercoaster,
   deleteRollercoaster,
-  createThemePark
+  createThemePark,
+  getRollercoasterById
 }
