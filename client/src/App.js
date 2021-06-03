@@ -10,6 +10,7 @@ import Nav from './component/Nav'
 import Home from './pages/Home'
 import CoasterList from './pages/CoasterList'
 import RollerCoasterDetails from './pages/RollerCoasterDetails'
+import ThemeList from './pages/ThemeList'
 // import RollerCoasterForm from './pages/RollerCoasterForm'
 
 import './App.css'
@@ -54,6 +55,7 @@ class App extends Component {
   createNewCoaster = async () => {
     try {
       const res = await ApiClient.post('/rollercoaster')
+      console.log(res)
       this.setState({ rollercoasters: res.data.rollercoasters })
     } catch (error) {
       throw error
@@ -95,6 +97,15 @@ class App extends Component {
                 {...props}
                 rollercoasters={this.state.rollercoasters}
               ></CoasterList>
+            )}
+          />
+          <Route
+            path="/themepark"
+            component={(props) => (
+              <ThemeList
+                {...props}
+                themeparks={this.state.themeparks}
+              ></ThemeList>
             )}
           />
         </Switch>
