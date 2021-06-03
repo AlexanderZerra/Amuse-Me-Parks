@@ -30,6 +30,18 @@ const createRollercoaster = async (req, res) => {
   }
 }
 
+const createThemePark = async (req, res) => {
+  try {
+    const themePark = await new Themepark(req.body)
+    await themePark.save()
+    return res.status(201).json({
+      themePark
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 const deleteRollercoaster = async (request, response) => {
   try {
     const { id } = request.params
@@ -47,5 +59,6 @@ module.exports = {
   getAllRollercoaster,
   getAllThemeparks,
   createRollercoaster,
-  deleteRollercoaster
+  deleteRollercoaster,
+  createThemePark
 }
