@@ -11,8 +11,9 @@ const getAllRollercoaster = async (req, res) => {
 
 const getRollercoasterById = async (req, res) => {
   try {
-    const rollercoasters = await Rollercoaster.findByIdAndGet(id)
-    return res.status(200).json({ rollercoasters })
+    const { _id } = req.params
+    const rollercoaster = await Rollercoaster.findById(_id)
+    return res.status(200).json({ rollercoaster })
   } catch (error) {
     return res.status(500).send(error.message)
   }
