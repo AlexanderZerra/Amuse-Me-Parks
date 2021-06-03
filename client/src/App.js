@@ -50,6 +50,11 @@ class App extends Component {
     }
   }
 
+  // create a function to make a new rollercoaster " api client post"
+
+  // REMEMBER TO CHECK ROUTE
+  // check the "data"
+
   selectRollercoaster = (rollercoaster) => {
     console.log(rollercoaster)
     this.setState({ selectedRollercoaster: rollercoaster })

@@ -18,7 +18,7 @@ export default class RollerCoasterForm extends Component {
 
   //handle submit here
 
-  //
+  //also pass down the axios "post" call from app.js to here.
   render() {
     return <div>//inside this div make a form with inputs</div>
   }
