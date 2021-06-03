@@ -15,6 +15,9 @@ export default class RollerCoasterForm extends Component {
   }
 
   // handle change here
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
   //handle submit here
 
