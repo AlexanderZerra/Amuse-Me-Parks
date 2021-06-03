@@ -64,10 +64,11 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route
-            path="/coasterdetails/:id"
+            path="/coasterdetails/:_id"
             component={(props) => (
               <RollerCoasterDetails
                 {...props}
+                getAllRollerCoasters={this.getAllRollerCoasters}
                 rollercoasters={this.state.rollercoasters}
               ></RollerCoasterDetails>
             )}
