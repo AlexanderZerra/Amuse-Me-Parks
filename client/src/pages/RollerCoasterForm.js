@@ -13,7 +13,13 @@ export default class RollerCoasterForm extends Component {
       image: ''
     }
   }
+
+  // handle change here
+
+  //handle submit here
+
+  //
   render() {
-    return <div></div>
+    return <div>//inside this div make a form with inputs</div>
   }
 }
