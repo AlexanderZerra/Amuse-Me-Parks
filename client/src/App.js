@@ -29,7 +29,6 @@ class App extends Component {
   async componentDidMount() {
     this.getAllRollerCoasters()
     this.getAllThemeParks()
-    this.createNewCoaster()
   }
 
   getAllRollerCoasters = async () => {
@@ -56,6 +55,7 @@ class App extends Component {
     try {
       const res = await ApiClient.post('/rollercoaster')
       console.log(res)
+
       this.setState({ rollercoasters: res.data.rollercoasters })
     } catch (error) {
       throw error
