@@ -29,7 +29,7 @@ export default class RollerCoasterForm extends Component {
     return (
       <div>
         <h1>RollercoasterForm</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={(e) => this.props.handleSubmit(e, this.state)}>
           <input
             type="text"
             value={this.state.name}

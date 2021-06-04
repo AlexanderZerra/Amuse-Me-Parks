@@ -62,10 +62,10 @@ class App extends Component {
     }
   }
 
-  handleSubmit = async (e) => {
+  handleSubmit = async (e, form) => {
     e.preventDefault()
     try {
-      const res = await ApiClient.post('/rollercoaster', this.state)
+      const res = await ApiClient.post('/rollercoaster', form)
       console.log(res)
       this.props.history.push(`/`)
       // this.setState({ rollercoasters: res.data.rollercoasters })
