@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  /* background-image: url('./assets/coasterbackground.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .App-logo {
@@ -35,4 +38,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-left: 0.5em;
+  padding: 1em;
+}
+
+.welcome {
+  font-size: 100px;
+  font-family: 'Limelight', cursive;
+  color: white;
+}
+.phome {
+  font-family: 'Limelight', cursive;
+  color: whitesmoke;
+}
+
+.rollercoastername {
+  color: orange;
+  font-family: 'Sigmar One', cursive;
+}
+.rollercoasterdescription {
+  color: orange;
+  font-family: 'Mate SC', serif;
+}
+.rollercoasterheight {
+  color: orange;
+  font-family: 'Mate SC', serif;
+}
+.rollercoasterlength {
+  color: orange;
+  font-family: 'Mate SC', serif;
+}
+.rollercoastertopspeed {
+  color: orange;
+  font-family: 'Stint Ultra ', serif;
 }

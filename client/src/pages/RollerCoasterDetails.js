@@ -57,7 +57,7 @@ export default class RollerCoasterDetails extends Component {
             <p className="rollercoasterlength">
               {this.state.rollercoaster.length}{' '}
             </p>
-            <p className="rollercoasterheight">
+            <p className="rollercoastertopspeed">
               {this.state.rollercoaster.topSpeed}
             </p>
             <button
