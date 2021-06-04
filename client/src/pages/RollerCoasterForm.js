@@ -21,6 +21,11 @@ export default class RollerCoasterForm extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  handlePush = (e) => {
+    this.props.handleSubmit(e, this.state)
+    this.props.history.push('/')
+  }
+
   //handle submit here
 
   //also pass down the axios "post" call from app.js to here.
@@ -29,7 +34,7 @@ export default class RollerCoasterForm extends Component {
     return (
       <div>
         <h1>RollercoasterForm</h1>
-        <form onSubmit={(e) => this.props.handleSubmit(e, this.state)}>
+        <form onSubmit={(e) => this.handlePush(e)}>
           <input
             type="text"
             value={this.state.name}
