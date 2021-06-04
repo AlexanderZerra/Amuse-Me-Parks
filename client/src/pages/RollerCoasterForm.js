@@ -23,7 +23,7 @@ export default class RollerCoasterForm extends Component {
 
   handlePush = (e) => {
     this.props.handleSubmit(e, this.state)
-    this.props.history.push('/')
+    this.props.history.push('/coasters')
   }
 
   //handle submit here

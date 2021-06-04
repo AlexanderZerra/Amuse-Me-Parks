@@ -68,7 +68,9 @@ class App extends Component {
       const res = await ApiClient.post('/rollercoaster', form)
       console.log(res)
 
-      // this.setState({ rollercoasters: res.data.rollercoasters })
+      this.setState({
+        rollercoasters: [res.data.rollercoaster, ...this.state.rollercoasters]
+      })
     } catch (error) {
       throw error
     }

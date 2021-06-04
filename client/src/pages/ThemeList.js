@@ -4,17 +4,11 @@ export default class ThemeList extends Component {
   render() {
     return (
       <div>
-        {/* {this.props.themePark ? this.props.themePark.map((park,index)=>
-      <div
-      key={index}
-      onclick={()=>
-      this.props.history.push(`/themepark/${park._id}`)
-    }
-      >
-        <ThemeParkCard themePark={park} />
-        </div>
-        ))
-      :null } */}
+        {this.props.themeparks.map((park, index) => (
+          <div key={index}>
+            <p>{park.name}</p>
+          </div>
+        ))}
       </div>
     )
   }
