@@ -51,14 +51,16 @@
 .welcome {
   font-size: 100px;
   font-family: 'Limelight', cursive;
-  color: black;
-  /* background-image: url('./assets/coasterbackground.jpeg');
+  color: white;
+}
+.photohome {
+  background-image: url('./assets/coasterbackground.jpeg');
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 .phome {
   font-family: 'Limelight', cursive;
-  color: black;
+  color: white;
 }
 
 .rollercoastername {

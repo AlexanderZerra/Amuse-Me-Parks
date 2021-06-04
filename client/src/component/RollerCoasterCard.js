@@ -5,8 +5,8 @@ export default class RollerCoasterCard extends Component {
     const { rollercoaster } = this.props
     return (
       <div>
-        // <img src={rollercoaster.image} alt={rollercoaster.name} />
-        // <h2>{rollercoaster.name}</h2>
+        <img src={rollercoaster.image} alt={rollercoaster.name} />
+        <h2>{rollercoaster.name}</h2>
         {/* //   <h3>{rollercoaster.themePark}</h3>
       //   <h4>{rollercoaster.height}</h4>
       //   <h5>{rollercoaster.length}</h5>

@@ -6,7 +6,7 @@ export default class ThemeList extends Component {
       <div>
         {this.props.themeparks.map((park, index) => (
           <div key={index}>
-            <p className="park">{park.name}</p>
+            <img src={park.image} alt={park.name} />
           </div>
         ))}
       </div>
