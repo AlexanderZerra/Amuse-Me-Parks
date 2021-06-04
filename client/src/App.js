@@ -11,7 +11,7 @@ import Home from './pages/Home'
 import CoasterList from './pages/CoasterList'
 import RollerCoasterDetails from './pages/RollerCoasterDetails'
 import ThemeList from './pages/ThemeList'
-// import RollerCoasterForm from './pages/RollerCoasterForm'
+import RollerCoasterForm from './pages/RollerCoasterForm'
 
 import './App.css'
 
@@ -62,6 +62,18 @@ class App extends Component {
     }
   }
 
+  handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await ApiClient.post('/rollercoaster', this.state)
+      console.log(res)
+      this.props.history.push(`/`)
+      // this.setState({ rollercoasters: res.data.rollercoasters })
+    } catch (error) {
+      throw error
+    }
+  }
+
   // create a function to make a new rollercoaster " api client post"
 
   // REMEMBER TO CHECK ROUTE
@@ -80,6 +92,12 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route
+            path="/new"
+            component={(props) => (
+              <RollerCoasterForm {...props} handleSubmit={this.handleSubmit} />
+            )}
+          />
           <Route
             path="/coasterdetails/:_id"
             component={(props) => (

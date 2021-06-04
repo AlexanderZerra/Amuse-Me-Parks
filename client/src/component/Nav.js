@@ -7,7 +7,7 @@ export default class Nav extends Component {
       <nav className="navbar">
         <div>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/themeParks">Theme Parks</NavLink>
+          <NavLink to="/themeparks">Theme Parks</NavLink>
           <NavLink to="/newrolleroaster">Add your own Ride</NavLink>
           <NavLink to="/coasters">Rollercoasters</NavLink>
         </div>

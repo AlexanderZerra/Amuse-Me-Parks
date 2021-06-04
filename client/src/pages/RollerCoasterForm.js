@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ApiClient from '../Globals'
+import Home from './Home'
 
 export default class RollerCoasterForm extends Component {
   constructor() {
@@ -19,29 +20,15 @@ export default class RollerCoasterForm extends Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-  handleAddCoaster = (e) => {
-    event.preventDefault()
-    const coaster = {
-      name: this.state.name,
-      themePark: this.state.themePark,
-      description: this.state.description,
-      height: this.state.height,
-      length: this.state.length,
-      topSpeed: this.state.topSpeed,
-      image: this.state.image
-    }
-    ApiClient.post(`${BASE_URL}/newcoaster`, { coaster }).then((res) => {
-      console.log(res)
-      console.log(res.data)
-    })
-  }
 
   //handle submit here
 
   //also pass down the axios "post" call from app.js to here.
   render() {
+    console.log(this.state)
     return (
       <div>
+        <h1>RollercoasterForm</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -93,6 +80,7 @@ export default class RollerCoasterForm extends Component {
             name="image"
             placeholder="image url"
           />
+          <button>Submit</button>
         </form>
       </div>
     )
