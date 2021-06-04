@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 export default class RollerCoasterCard extends Component {
   render() {
     const { rollercoaster } = this.props
+
     return (
       <div>
         <img src={rollercoaster.image} alt={rollercoaster.name} />
